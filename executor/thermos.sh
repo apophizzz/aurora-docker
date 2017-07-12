@@ -38,18 +38,22 @@ fi
 if [ -z ${MESOS_ROOT} ]; then
 	echo "MESOS_ROOT is not set, will be set to MESOS_WORK_DIR:$MESOS_WORK_DIR"
 	MESOS_ROOT=$MESOS_WORK_DIR
-elif [ "$MESOS_ROOT" != "$MESOS_WORK_DIR" ]
+elif [ "$MESOS_ROOT" != "$MESOS_WORK_DIR" ]; then
 	echo "MESOS_ROOT is set to $MESOS_ROOT, but must match MESOS_WORK_DIR:$MESOS_WORK_DIR"
 	exit 1
          
 fi
 
-/usr/sbin/thermos_observer --port=${HTTP_PORT:-1338} \ 
- --mesos-root=${MESOS_ROOT} \ 
- --app_daemonize \ 
- --log_to_disk=NONE \ 
- --log_to_stderr=google:INFO &
+echo "Starting thermos ..."
+nohup /usr/sbin/thermos_observer --port=${HTTP_PORT:-1338} \
+ --mesos-root=${MESOS_ROOT} \
+ --app_daemonize \
+ --log_to_disk=NONE \
+ --log_to_stderr=google:INFO 
 
-mesos-slave &
+echo "Starting Mesos slave ..."
+nohup mesos-slave 
 
 wait
+
+
