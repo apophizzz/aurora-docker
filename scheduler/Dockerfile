@@ -1,6 +1,6 @@
 FROM mesosphere/mesos-master:1.3.0
 
-MAINTAINER Patrick Kleindienst <Patrick.Kleindienst@ibm.com>
+MAINTAINER Patrick Kleindienst
 
 RUN apt-get update 
 
