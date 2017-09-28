@@ -15,6 +15,7 @@ AURORA_FLAGS=(
  -native_log_quorum_size=${NATIVE_LOG_QUORUM_SIZE:-1}
  -allowed_container_types=${ALLOWED_CONTAINER_TYPES:-MESOS,DOCKER}
  -thermos_executor_path=${THERMOS_EXECUTOR_PATH:-/usr/share/aurora/bin/thermos_executor.pex}
+ -thermos_executor_cpu=${THERMOS_EXECUTOR_CPU:-0.25}
  -allow_docker_parameters=true
 )
 
