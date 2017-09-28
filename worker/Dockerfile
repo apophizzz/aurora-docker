@@ -1,4 +1,4 @@
-FROM mesosphere/mesos-slave:1.3.0
+FROM mesosphere/mesos-slave:1.1.1
 
 RUN apt-get update && \
     apt-get install -y python2.7 wget libcurl4-nss-dev 
