@@ -12,6 +12,7 @@
  * __Aurora CLI:__ <br/>
    `latest`, `0.17.0` [(0.17.0/Dockerfile)](https://github.com/apophis90/aurora-docker/blob/master/cli/0.17.0/Dockerfile)
 
+<br/>
 
 ## What is Aurora?
 
@@ -34,6 +35,8 @@ The Thermos executor is a custom executor which is responsible for starting the 
 #### Thermos observer    
 The Thermos observer provides an interface for browsing task sandbox directories from the Aurora scheduler UI.
 
+<br/>
+
 ## How to use these Docker images
 
 ### Aurora scheduler
@@ -42,6 +45,7 @@ The Thermos observer provides an interface for browsing task sandbox directories
 
 ### Aurora CLI
 
+<br/>
 
 ## License
 
