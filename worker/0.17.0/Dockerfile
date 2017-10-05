@@ -1,7 +1,7 @@
 FROM mesosphere/mesos-slave:1.1.1
 MAINTAINER Patrick Kleindienst <patrick.kleindienst@web.de>
 
-ENV AURORA_VERSION=0.17.0
+ARG AURORA_VERSION=0.17.0
 
 RUN apt-get update && \
     apt-get install -y python2.7 wget libcurl4-nss-dev
