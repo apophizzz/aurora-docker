@@ -1,5 +1,4 @@
 FROM mesosphere/mesos-master:1.3.0
-
 MAINTAINER Patrick Kleindienst <patrick.kleindienst@web.de>
 
 ARG AURORA_VERSION=0.17.0
