@@ -6,8 +6,8 @@ ARG AURORA_VERSION=0.17.0
 RUN apt-get update && \
     apt-get install -y python2.7 wget libcurl4-nss-dev
 
-RUN wget -c https://apache.bintray.com/aurora/ubuntu-trusty/aurora-executor_$AURORA_VERSION_amd64.deb && \
-    dpkg -i aurora-executor_$AURORA_VERSION_amd64.deb
+RUN wget -c https://apache.bintray.com/aurora/ubuntu-trusty/aurora-executor_${AURORA_VERSION}_amd64.deb && \
+    dpkg -i aurora-executor_${AURORA_VERSION}_amd64.deb
 
 COPY thermos.sh ./thermos.sh
 
