@@ -17,7 +17,7 @@
 ## What is Aurora?
 
 > Apache Aurora is a service scheduler that runs on top of Apache Mesos, enabling you to run long-running services, cron jobs, and ad-hoc jobs that take advantage of Apache Mesos’ scalability, fault-tolerance, and resource isolation. <br/>
-[- Aurora documentation](https://aurora.apache.org/documentation/latest/)
+\- [Aurora documentation](https://aurora.apache.org/documentation/latest/)
 
 Aurora is essentially made up of four components:
 
