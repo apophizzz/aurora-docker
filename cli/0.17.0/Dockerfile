@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Patrick Kleindienst <patrick.kleindienst@web.de>
 
 ARG AURORA_VERSION=0.17.0
-ARG AURORA_CONFIG_ROOT=/var/aurora/clusters.json
+ENV AURORA_CONFIG_ROOT=/var/aurora/clusters.json
 
 RUN apt-get update && \
     apt-get install -y python2.7 wget
