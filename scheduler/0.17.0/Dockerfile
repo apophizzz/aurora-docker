@@ -3,6 +3,7 @@ MAINTAINER Patrick Kleindienst <patrick.kleindienst@web.de>
 
 ARG AURORA_VERSION=0.17.0
 ARG MESOS_REPLICATED_LOG_PATH=/var/lib/aurora/scheduler/db
+ENV USER=aurora
 
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
@@ -18,8 +19,13 @@ RUN service aurora-scheduler stop && \
     sudo -u aurora mkdir -p $MESOS_REPLICATED_LOG_PATH && \
     sudo -u aurora mesos-log initialize --path=$MESOS_REPLICATED_LOG_PATH
 
-COPY scheduler.sh ./scheduler.sh
+COPY scheduler.sh /home/aurora/scheduler.sh
 
-RUN chmod 755 ./scheduler.sh
+RUN chown $USER:$USER /home/$USER/scheduler.sh && \
+    chmod 500 /home/$USER/scheduler.sh
+
+USER aurora
+
+WORKDIR /home/$USER
 
 ENTRYPOINT ["./scheduler.sh"]
