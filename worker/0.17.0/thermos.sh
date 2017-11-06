@@ -47,13 +47,15 @@ fi
 chown -R $USER:$USER $MESOS_ROOT $MESOS_WORK_DIR $MESOS_LOG_DIR
 
 echo "Starting thermos ..."
-sudo -E -u aurora nohup /usr/sbin/thermos_observer --port=${HTTP_PORT:-1338} \
+# sudo -E -u aurora nohup /usr/sbin/thermos_observer --port=${HTTP_PORT:-1338} \
+nohup /usr/sbin/thermos_observer --port=${HTTP_PORT:-1338} \
  --mesos-root=${MESOS_ROOT} \
  --app_daemonize \
  --log_to_disk=NONE \
  --log_to_stderr=google:INFO
 
 echo "Starting Mesos slave ..."
-sudo -E -u aurora nohup mesos-slave
+# sudo -E -u aurora nohup mesos-slave
+nohup mesos-slave
 
 wait
