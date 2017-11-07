@@ -3,13 +3,13 @@
 
 ## Tags and Dockerfiles
 
- * __Aurora scheduler:__ <br/>
+ * __Aurora scheduler:__ [![Docker Repository on Quay](https://quay.io/repository/pkleindienst/aurora-scheduler/status "Docker Repository on Quay")](https://quay.io/repository/pkleindienst/aurora-scheduler) <br/>
    `latest`, `0.17.0` [(0.17.0/Dockerfile)](https://github.com/apophis90/aurora-docker/blob/master/scheduler/0.17.0/Dockerfile)
 
- * __Aurora worker:__ <br/>
+ * __Aurora worker:__ [![Docker Repository on Quay](https://quay.io/repository/pkleindienst/aurora-worker/status "Docker Repository on Quay")](https://quay.io/repository/pkleindienst/aurora-worker) <br/>
    `latest`, `0.17.0` [(0.17.0/Dockerfile)](https://github.com/apophis90/aurora-docker/blob/master/worker/0.17.0/Dockerfile)
 
- * __Aurora CLI:__ <br/>
+ * __Aurora CLI:__ [![Docker Repository on Quay](https://quay.io/repository/pkleindienst/aurora-cli/status "Docker Repository on Quay")](https://quay.io/repository/pkleindienst/aurora-cli) <br/>
    `latest`, `0.17.0` [(0.17.0/Dockerfile)](https://github.com/apophis90/aurora-docker/blob/master/cli/0.17.0/Dockerfile)
 
 <br/>
