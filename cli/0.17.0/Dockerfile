@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:stretch-slim
 MAINTAINER Patrick Kleindienst <patrick.kleindienst@web.de>
 
 ARG AURORA_VERSION=0.17.0
